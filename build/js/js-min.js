@@ -1,0 +1,1 @@
+const name="roman",age=23;
