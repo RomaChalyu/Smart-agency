@@ -1,0 +1,32 @@
+@import './variable.scss';
+
+//-------------------------------------------------FONT----------------------------------------------------------------
+
+@font-face{
+    font-family: "OpenSans";
+    src : url("../../fonts/Open\ Sans\ -\ Regular\ .ttf");
+}
+
+@font-face{
+    font-family: "OpenSans-Semibold";
+    src : url("../../fonts/Open\ Sans\ -\ Semibold.ttf");
+}
+@font-face{
+    font-family: "SourceSansPro";
+    src : url("../../fonts/SourceSansPro-Regular.otf");
+}
+
+
+//-------------------------------------------------COLOR----------------------------------------------------
+
+$color-main-orange : #ff5c36;
+$color-main-light: #fc6744;
+$color-main-gray: #626262;
+$color-background : #fbfbfb;
+$color-gray: #d3d3d3;
+
+
+//-------------------------------------------------MEDIA SCREEN VARIABLE---------------------------------------------------
+
+$phone : 425px;
+$tablet : 768px;
