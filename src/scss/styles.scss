@@ -1,2 +1,140 @@
-@import './global/global.scss';
-@import 'variable.scss';
+@import 'global/global.scss';
+@import './variable.scss';
+
+
+//----------------------------------------HEADER-----------------------------------------------------------------
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header-logo-menu{
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    .logo{
+        border: 2px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        p, span{
+            font-family: OpenSans-Semibold;
+            font-size: 38px;
+            color : $text-gray;    
+        }
+        span{
+            color: $orange-light;
+        }
+    }
+    .header-menu{
+        display: flex;
+        align-items: center;
+        ul{
+            display: flex;
+            list-style-type: none;
+            font-size: 28px;
+        }
+        li{
+            margin: 0 8px 0 8px;
+        }
+        a{
+            color :$text-gray;
+        }
+    }
+    .contain-burger{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .burger{
+            .burger-icon{
+                width: 40px;
+                height: 6px;
+                background-color: $text-gray;
+            }
+            .icon1, .icon2{
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+.header-title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    .title-contain{
+        width: 65%;
+        h1{
+            font-family: OpenSans-Semibold;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 30px;    
+        }
+       // span{
+         //   color : $orange;
+        //}
+        p{
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+}
+.header-form{
+    display: flex;
+    margin-top: 150px;
+    .form{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 50px;
+        background: white;
+        h2{
+            font-size: 22px;
+            color: $text-gray;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        span{
+            color : $orange-light;
+        }
+        input, textarea{
+            border: none;
+            border-bottom: 1px solid $text-gray;
+            width: 294px;
+            height: 40px;
+            font-size: 20px
+        }
+        textarea{
+            height: 116px;
+            resize: none;  
+        }
+        .btn-contain{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            button{
+                cursor: pointer;
+                width: 238px;
+                height: 58px;
+                background-color:$orange;
+                border-radius: 100px;
+                color:white;
+                font-size: 16px;
+                transition : .7s linear 0.2s;
+            }
+            span{
+                color: white;
+                margin-left: 5px;
+                font-size: 18px;
+            }
+            button:hover{
+                transition: 0.7s;
+                background-color: #e9431e;
+                font-size: 17px;
+            }
+        }
+    }
+}

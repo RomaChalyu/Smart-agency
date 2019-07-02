@@ -1,8 +1,24 @@
+
+@import '../variable.scss';
 * {
     margin: 0;
     padding: 0;
+    font-family: OpenSans;
 }
 
 a {
     text-decoration: none;
+}
+
+.g-container{
+    max-width: 1145px;
+    width: 100%;
+}
+
+.background-activ{
+    background-color: $gray;
+}
+
+.text-activ{
+    color:$orange;
 }

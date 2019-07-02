@@ -1,10 +1,11 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
-const autoprefixer = require("gulp-autoprefixer");
+const autoprefixer = require('autoprefixer');
 const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify-es").default;
 const browserSync = require('browser-sync').create();
+const postcss = require('gulp-postcss');
 
 
 gulp.task("sass", () => {
@@ -19,10 +20,7 @@ gulp.task("styles", () => {
     .src("./src/css/**/*.css")
     .pipe(concat("style-min.css"))
     .pipe(
-      autoprefixer({
-        browsers: ["last 3 versions"],
-        cascade: false
-      })
+      postcss([ autoprefixer() ])
     )
     .pipe(
       cleanCSS({
