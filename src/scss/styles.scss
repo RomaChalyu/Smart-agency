@@ -10,12 +10,12 @@ header{
 }
 .header-logo-menu{
     width: 100%;
-    padding-top: 100px;
+    padding-top: 60px;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
     .logo{
-        border: 2px solid;
+        border: 2px solid $text-gray;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -72,20 +72,24 @@ header{
             font-family: OpenSans-Semibold;
             font-size: 50px;
             text-align: center;
-            margin-bottom: 30px;    
+            margin-bottom: 30px;  
+            color: $text-gray;  
+            span {
+                color : $orange;
+            }
         }
-       // span{
-         //   color : $orange;
-        //}
         p{
             text-align: center;
             font-size: 16px;
+            color: $text-gray;  
         }
     }
 }
 .header-form{
     display: flex;
     margin-top: 150px;
+    margin-left: 2%;
+    border-radius: 5px;
     .form{
         display: flex;
         flex-direction: column;
@@ -123,7 +127,7 @@ header{
                 border-radius: 100px;
                 color:white;
                 font-size: 16px;
-                transition : .7s linear 0.2s;
+                transition : background-color .7s linear 0.2s;
             }
             span{
                 color: white;
@@ -138,3 +142,142 @@ header{
         }
     }
 }
+
+//----------------------------------------HEADER MEDIA SCREEN-----------------------------------------------------------------
+
+@media screen and (max-width :$desktop){
+    .header-logo-menu{
+        padding-top: 40px;
+        .logo {
+            margin-left: 2%;
+            p{
+                font-size: 34px;
+            }
+            span{
+                font-size: 34px;
+            }
+        }
+        .header-menu{
+            margin-right: 2%;
+            ul{
+                font-size: 24px;
+            }
+        }
+    }
+    .header-title{
+        .title-contain{
+            width: 70%;
+            h1{
+                font-size: 40px;
+                }
+        }
+    }
+    .header-form{
+        width: 100%;
+        justify-content: center;
+        margin-left: 0%;
+    }
+}
+
+
+@media screen and (max-width :$tablet){
+    .header-logo-menu{
+        padding-top: 22px;
+        flex-direction: column;
+        .logo {
+            max-width: 75px;
+            height: 30px;
+            p{
+                font-size: 26px;
+            }
+            span{
+                font-size: 26px;
+            }
+        }
+        .header-menu{
+            display: none;
+            margin-right: 0px;
+            ul{
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                position: fixed;
+                top: 0px;
+                height: 231px;
+                padding-top: 30px;
+                width: 100%;
+            }
+        }
+        .contain-burger{
+            display: block;
+            .burger{
+                margin-top: -34px;
+                margin-left: 88%;
+            }
+        }
+    }
+    .header-title{
+        margin-top: 170px;
+    }
+    .header-form{
+        margin-top: 130px;
+    }
+}
+
+@media screen and (max-width :$phone){
+    .header-logo-menu{
+        padding-top: 12px;
+        .logo{
+            max-width: 16%;
+            height: 19px;
+            p, span{
+                font-size: 16px;
+            }
+        }
+        .contain-burger{
+            .burger{
+                margin-top: -29px;
+                margin-left: 86%;
+                .burger-icon{
+                    width: 28px;
+                    height: 4px;
+                }            
+            }
+        }
+    }
+    .header-title{
+        margin-top: 110px;
+        .title-contain{
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+    .header-form{
+        margin-top: 130px;
+        .form {
+           width: 100%;
+           h2{
+            font-size: 20px;
+           }
+           input,textarea {
+            margin-left: 4%;
+            max-width: 92%;
+            font-size: 14px;
+           }
+           textarea{
+               height: 90px;
+           }
+           .btn-contain{
+               a{
+                   button{
+                    width: 160px;
+                    height: 50px;
+                    font-size: 14px;
+                   }
+               }
+           }
+        }
+    }
+}
+

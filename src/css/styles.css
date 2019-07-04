@@ -25,7 +25,7 @@ a {
 .background-activ {
   background-color: #d3d3d3; }
 
-.text-activ {
+.orange-lite {
   color: #ff5c36; }
 
 @font-face {
@@ -47,12 +47,12 @@ header {
 
 .header-logo-menu {
   width: 100%;
-  padding-top: 100px;
+  padding-top: 60px;
   display: flex;
   justify-content: space-between;
   overflow: hidden; }
   .header-logo-menu .logo {
-    border: 2px solid;
+    border: 2px solid #626262;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,14 +97,20 @@ header {
       font-family: OpenSans-Semibold;
       font-size: 50px;
       text-align: center;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      color: #626262; }
+      .header-title .title-contain h1 span {
+        color: #ff5c36; }
     .header-title .title-contain p {
       text-align: center;
-      font-size: 16px; }
+      font-size: 16px;
+      color: #626262; }
 
 .header-form {
   display: flex;
-  margin-top: 150px; }
+  margin-top: 150px;
+  margin-left: 2%;
+  border-radius: 5px; }
   .header-form .form {
     display: flex;
     flex-direction: column;
@@ -138,7 +144,7 @@ header {
         border-radius: 100px;
         color: white;
         font-size: 16px;
-        transition: .7s linear 0.2s; }
+        transition: background-color .7s linear 0.2s; }
       .header-form .form .btn-contain span {
         color: white;
         margin-left: 5px;
@@ -147,3 +153,93 @@ header {
         transition: 0.7s;
         background-color: #e9431e;
         font-size: 17px; }
+
+@media screen and (max-width: 1024px) {
+  .header-logo-menu {
+    padding-top: 40px; }
+    .header-logo-menu .logo {
+      margin-left: 2%; }
+      .header-logo-menu .logo p {
+        font-size: 34px; }
+      .header-logo-menu .logo span {
+        font-size: 34px; }
+    .header-logo-menu .header-menu {
+      margin-right: 2%; }
+      .header-logo-menu .header-menu ul {
+        font-size: 24px; }
+  .header-title .title-contain {
+    width: 70%; }
+    .header-title .title-contain h1 {
+      font-size: 40px; }
+  .header-form {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0%; } }
+
+@media screen and (max-width: 768px) {
+  .header-logo-menu {
+    padding-top: 22px;
+    flex-direction: column; }
+    .header-logo-menu .logo {
+      max-width: 75px;
+      height: 30px; }
+      .header-logo-menu .logo p {
+        font-size: 26px; }
+      .header-logo-menu .logo span {
+        font-size: 26px; }
+    .header-logo-menu .header-menu {
+      display: none;
+      margin-right: 0px; }
+      .header-logo-menu .header-menu ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        top: 0px;
+        height: 231px;
+        padding-top: 30px;
+        width: 100%; }
+    .header-logo-menu .contain-burger {
+      display: block; }
+      .header-logo-menu .contain-burger .burger {
+        margin-top: -34px;
+        margin-left: 88%; }
+  .header-title {
+    margin-top: 170px; }
+  .header-form {
+    margin-top: 130px; } }
+
+@media screen and (max-width: 425px) {
+  .header-logo-menu {
+    padding-top: 12px; }
+    .header-logo-menu .logo {
+      max-width: 16%;
+      height: 19px; }
+      .header-logo-menu .logo p, .header-logo-menu .logo span {
+        font-size: 16px; }
+    .header-logo-menu .contain-burger .burger {
+      margin-top: -29px;
+      margin-left: 86%; }
+      .header-logo-menu .contain-burger .burger .burger-icon {
+        width: 28px;
+        height: 4px; }
+  .header-title {
+    margin-top: 110px; }
+    .header-title .title-contain h1 {
+      font-size: 30px; }
+  .header-form {
+    margin-top: 130px; }
+    .header-form .form {
+      width: 100%; }
+      .header-form .form h2 {
+        font-size: 20px; }
+      .header-form .form input, .header-form .form textarea {
+        margin-left: 4%;
+        max-width: 92%;
+        font-size: 14px; }
+      .header-form .form textarea {
+        height: 90px; }
+      .header-form .form .btn-contain a button {
+        width: 160px;
+        height: 50px;
+        font-size: 14px; } }
