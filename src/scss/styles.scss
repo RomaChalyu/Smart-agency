@@ -43,6 +43,10 @@ header{
         a{
             color :$text-gray;
         }
+        li :hover {
+            color : $orange-light;
+            transition: color 0.3s;
+        }
     }
     .contain-burger{
         display: none;
@@ -107,9 +111,19 @@ header{
         input, textarea{
             border: none;
             border-bottom: 1px solid $text-gray;
-            width: 294px;
+            max-width: 294px;
+            width: 100%;
             height: 40px;
-            font-size: 20px
+            font-size: 20px;
+            margin-top: 3px;
+        }
+        p{
+            font-size: 20px;
+            display: none;
+            color: red;
+        }
+        .form-warning-text{
+            display: block;
         }
         textarea{
             height: 116px;
@@ -137,7 +151,6 @@ header{
             button:hover{
                 transition: 0.7s;
                 background-color: #e9431e;
-                font-size: 17px;
             }
         }
     }
@@ -157,12 +170,6 @@ header{
                 font-size: 34px;
             }
         }
-        .header-menu{
-            margin-right: 2%;
-            ul{
-                font-size: 24px;
-            }
-        }
     }
     .header-title{
         .title-contain{
@@ -176,6 +183,8 @@ header{
         width: 100%;
         justify-content: center;
         margin-left: 0%;
+        .form{
+        }
     }
 }
 
@@ -206,11 +215,41 @@ header{
                 height: 231px;
                 padding-top: 30px;
                 width: 100%;
+                border-radius: 5px;
+                padding-bottom: 20px;
+                li{
+                    text-shadow: 0px 0px 15px white;
+                    a{
+                        color : $orange-light;
+                    }
+                    a:active{
+                        color:red;
+                    }
+                }
             }
+            .header-menu__activ{
+                background: black;
+                opacity: 0.9;
+                animation: animation-Menu  0.4s;
+
+            }
+            .header-menu__passive{
+                background: black;
+                opacity: 0.9;
+                animation: animation-Menu__reverse 0.4s; 
+            }
+        }
+        .db{
+            display: block;
+        }
+        .dn{
+            display: none;
         }
         .contain-burger{
             display: block;
             .burger{
+                position: fixed;
+                width: 42px;
                 margin-top: -34px;
                 margin-left: 88%;
             }
@@ -221,6 +260,15 @@ header{
     }
     .header-form{
         margin-top: 130px;
+        .form{
+            textarea{
+                margin-bottom: 40px;
+            }
+            p{
+                font-size: 18px;
+                margin-top: -27px;
+            }
+        }
     }
 }
 
@@ -234,8 +282,16 @@ header{
                 font-size: 16px;
             }
         }
+        .header-menu{
+            ul{
+                font-size: 20px;
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+        }
         .contain-burger{
             .burger{
+                width: 31px;
                 margin-top: -29px;
                 margin-left: 86%;
                 .burger-icon{
@@ -262,13 +318,17 @@ header{
            }
            input,textarea {
             margin-left: 4%;
-            max-width: 92%;
+            max-width: 220px;
             font-size: 14px;
+           }
+           p{
+               font-size: 14px;
            }
            textarea{
                height: 90px;
            }
            .btn-contain{
+               margin-top: 20px;
                a{
                    button{
                     width: 160px;

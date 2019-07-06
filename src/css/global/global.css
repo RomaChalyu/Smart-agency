@@ -27,3 +27,74 @@ a {
 
 .orange-lite {
   color: #ff5c36; }
+
+@keyframes animation-Menu {
+  0% {
+    top: -318px;
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0,9;
+    top: 0; } }
+
+@keyframes animation-Menu__reverse {
+  0% {
+    top: 0px; }
+  100% {
+    top: -318px; } }
+
+.animationIcon .icon1 {
+  position: absolute;
+  top: 10px;
+  transform: rotate(45deg);
+  transition: transform 0.8s; }
+
+.animationIcon .icon2 {
+  position: absolute;
+  top: 10px;
+  opacity: 0; }
+
+.animationIcon .icon3 {
+  position: absolute;
+  top: 10px;
+  transform: rotate(-45deg);
+  transition: transform 0.8s; }
+
+.animationIcon-reverse .icon1 {
+  animation: animationIcon 0.4s; }
+
+.animationIcon-reverse .icon2 {
+  animation: animationIcon2 0.4s; }
+
+.animationIcon-reverse .icon3 {
+  animation: animationIcon 0.4s; }
+
+@keyframes animationIcon {
+  0% {
+    position: absolute;
+    top: 10px;
+    transform: rotate(45deg);
+    transition: transform 0.4s; }
+  100% {
+    position: relative;
+    top: 0;
+    transform: none; } }
+
+@keyframes animationIcon2 {
+  0% {
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    transform: scale(0); }
+  20% {
+    opacity: 0; }
+  100% {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transform: scale(1); } }
+
+.header-form > .form > .form-style {
+  border-bottom: 1px solid  red;
+  outline: none; }
