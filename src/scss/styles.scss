@@ -14,177 +14,177 @@ header{
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    .logo{
-        border: 2px solid $text-gray;
+    .header-logo{
+        border: 3px solid $text-gray;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 5px;
-        p, span{
-            font-family: OpenSans-Semibold;
-            font-size: 38px;
-            color : $text-gray;    
-        }
+    }
+    .header-logo__item, span{
+        font-family: OpenSans-Semibold;
+        font-size: 38px;
+        color : $text-gray;
         span{
             color: $orange-light;
-        }
+            }    
     }
     .header-menu{
         display: flex;
         align-items: center;
-        ul{
-            display: flex;
-            list-style-type: none;
-            font-size: 28px;
-        }
-        li{
-            margin: 0 8px 0 8px;
-        }
-        a{
-            color :$text-gray;
-        }
-        li :hover {
-            color : $orange-light;
-            transition: color 0.3s;
-        }
     }
-    .contain-burger{
+    .header-menu__list{
+        display: flex;
+        list-style-type: none;
+        font-size: 28px;
+    }
+    .header-list__item{
+        margin: 0 8px 0 8px;
+    }
+    .header-list__link{
+        color :$text-gray;
+    }
+    .header-list__item :hover {
+        color : $orange-light;
+        transition: color 0.3s;
+    }
+    .contain-burger{ 
         display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .burger{
-            .burger-icon{
-                width: 40px;
-                height: 6px;
-                background-color: $text-gray;
-            }
-            .icon1, .icon2{
-                margin-bottom: 4px;
-            }
-        }
+    }
+    .burger-line{
+        width: 40px;
+        height: 6px;
+        background-color: $text-gray;
+    }
+    .burger-line:first-child{
+        margin-bottom: 4px;
+    }
+    .burger-line:nth-child(2){
+        margin-bottom: 4px; 
     }
 }
+
 .header-title{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 200px;
     .title-contain{
-        width: 65%;
-        h1{
-            font-family: OpenSans-Semibold;
-            font-size: 50px;
-            text-align: center;
-            margin-bottom: 30px;  
-            color: $text-gray;  
-            span {
-                color : $orange;
-            }
-        }
-        p{
-            text-align: center;
-            font-size: 16px;
-            color: $text-gray;  
+    width: 65%;
+    }
+    .header-headline{
+        font-family: OpenSans-Semibold;
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 30px;  
+        color: $text-gray;  
+        span {
+            color : $orange;
         }
     }
+    .header-title__text{
+        text-align: center;
+        font-size: 18px;
+        color: $text-gray;  
+    }
 }
+
 .header-form{
     display: flex;
     margin-top: 150px;
     margin-left: 2%;
     border-radius: 5px;
-    .form{
+    form{
         display: flex;
         flex-direction: column;
         padding: 10px 50px;
         background: white;
-        h2{
-            font-size: 22px;
-            color: $text-gray;
-            margin-bottom: 30px;
-            text-align: center;
-        }
+    }
+    .header-form__headline{
+        font-size: 22px;
+        color: $text-gray;
+        margin-bottom: 30px;
+        text-align: center;
         span{
             color : $orange-light;
         }
-        input, textarea{
-            border: none;
-            border-bottom: 1px solid $text-gray;
-            max-width: 294px;
-            width: 100%;
-            height: 40px;
-            font-size: 20px;
-            margin-top: 3px;
-        }
-        p{
-            font-size: 20px;
-            display: none;
-            color: red;
-        }
-        .form-warning-text{
-            display: block;
-        }
-        textarea{
-            height: 116px;
-            resize: none;  
-        }
-        .btn-contain{
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            button{
-                cursor: pointer;
-                width: 238px;
-                height: 58px;
-                background-color:$orange;
-                border-radius: 100px;
-                color:white;
-                font-size: 16px;
-                transition : background-color .7s linear 0.2s;
-            }
-            span{
-                color: white;
-                margin-left: 5px;
-                font-size: 18px;
-            }
-            button:hover{
-                transition: 0.7s;
-                background-color: #e9431e;
-            }
-        }
+    }
+    input, textarea{
+        border: none;
+        border-bottom: 1px solid $text-gray;
+        max-width: 294px;
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        margin-top: 3px;
+    }
+    .header-form__warning{
+        font-size: 20px;
+        display: none;
+        color: red;
+    }
+    textarea{
+        height: 116px;
+        resize: none;  
+    }
+    .btn-contain{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .button{
+        cursor: pointer;
+        width: 238px;
+        height: 58px;
+        background-color:$orange;
+        border-radius: 100px;
+        color:white;
+        font-size: 16px;
+        transition : background-color .7s linear 0.2s;
+        word-spacing: 3px;
+    }
+    .button:hover{
+        transition: 0.7s;
+        background-color: #e9431e;
     }
 }
+
 
 //----------------------------------------HEADER MEDIA SCREEN-----------------------------------------------------------------
 
 @media screen and (max-width :$desktop){
     .header-logo-menu{
         padding-top: 40px;
-        .logo {
+        .header-logo{
             margin-left: 2%;
-            p{
-                font-size: 34px;
-            }
+        }
+        .header-logo__item{
+            font-size: 34px;
             span{
                 font-size: 34px;
             }
         }
+        .header-menu{
+            margin-right: 13px;
+        }
     }
+
     .header-title{
         .title-contain{
             width: 70%;
-            h1{
-                font-size: 40px;
-                }
+        }
+        .header-headline{
+            font-size: 40px;
         }
     }
+
     .header-form{
         width: 100%;
         justify-content: center;
         margin-left: 0%;
-        .form{
-        }
     }
 }
 
@@ -193,12 +193,12 @@ header{
     .header-logo-menu{
         padding-top: 22px;
         flex-direction: column;
-        .logo {
+        .header-logo{
             max-width: 75px;
             height: 30px;
-            p{
-                font-size: 26px;
-            }
+        }
+        .header-logo__item{
+            font-size: 26px;
             span{
                 font-size: 26px;
             }
@@ -206,53 +206,36 @@ header{
         .header-menu{
             display: none;
             margin-right: 0px;
-            ul{
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-around;
-                position: fixed;
-                top: 0px;
-                height: 231px;
-                padding-top: 30px;
-                width: 100%;
-                border-radius: 5px;
-                padding-bottom: 20px;
-                li{
-                    text-shadow: 0px 0px 15px white;
-                    a{
-                        color : $orange-light;
-                    }
-                    a:active{
-                        color:red;
-                    }
-                }
-            }
-            .header-menu__activ{
-                background: black;
-                opacity: 0.9;
-                animation: animation-Menu  0.4s;
-
-            }
-            .header-menu__passive{
-                background: black;
-                opacity: 0.9;
-                animation: animation-Menu__reverse 0.4s; 
-            }
         }
-        .db{
-            display: block;
+        .header-menu__list{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            top: 0px;
+            height: 231px;
+            padding-top: 30px;
+            width: 100%;
+            border-radius: 5px;
+            padding-bottom: 20px;
         }
-        .dn{
-            display: none;
+        .header-list__item{
+            text-shadow: 0px 0px 15px white;
+        }
+        .header-list__link{
+            color : $orange-light;
+        }
+        .header-list__link:active{
+            color:red;
         }
         .contain-burger{
             display: block;
-            .burger{
-                position: fixed;
-                width: 42px;
-                margin-top: -34px;
-                margin-left: 88%;
-            }
+        }
+        .burger{
+            position: fixed;
+            width: 42px;
+            margin-top: -34px;
+            margin-left: 88%;
         }
     }
     .header-title{
@@ -260,14 +243,12 @@ header{
     }
     .header-form{
         margin-top: 130px;
-        .form{
-            textarea{
-                margin-bottom: 40px;
-            }
-            p{
-                font-size: 18px;
-                margin-top: -27px;
-            }
+        textarea{
+            margin-bottom: 40px;
+        }
+        .header-form__warning{
+            font-size: 18px;
+            margin-top: -27px;
         }
     }
 }
@@ -275,68 +256,75 @@ header{
 @media screen and (max-width :$phone){
     .header-logo-menu{
         padding-top: 12px;
-        .logo{
+        .header-logo{
             max-width: 16%;
             height: 19px;
-            p, span{
-                font-size: 16px;
+            border: 2px solid $text-gray;
+            padding: 3px;
+        }
+        .header-logo__item{
+            font-size: 16px;
+            span{
+                font-size: 16px;  
             }
         }
-        .header-menu{
-            ul{
-                font-size: 20px;
-                padding-top: 20px;
-                padding-bottom: 10px;
-            }
+        .header-menu__list{
+            font-size: 20px;
+            padding-top: 20px;
+            padding-bottom: 10px;
         }
-        .contain-burger{
-            .burger{
-                width: 31px;
-                margin-top: -29px;
-                margin-left: 86%;
-                .burger-icon{
-                    width: 28px;
-                    height: 4px;
-                }            
-            }
+        .burger{
+            width: 31px;
+            margin-top: -29px;
+            margin-left: 86%;
+        }
+        .burger-line{
+            width: 28px;
+            height: 4px;
+        }            
+        .burger-line:first-child{
+            margin-bottom: 3px;
+        }
+        .burger-line:nth-child(2){
+            margin-bottom: 3px; 
         }
     }
     .header-title{
         margin-top: 110px;
-        .title-contain{
-            h1{
-                font-size: 30px;
-            }
+        .header-headline{
+            font-size: 30px;
+        }
+        .header-title__text{
+            font-size: 14px;
         }
     }
     .header-form{
         margin-top: 130px;
-        .form {
+        form {
            width: 100%;
-           h2{
+        }
+        .header-form__headline{
             font-size: 20px;
-           }
-           input,textarea {
+        }
+        input,textarea {
             margin-left: 4%;
             max-width: 220px;
             font-size: 14px;
-           }
-           p{
-               font-size: 14px;
-           }
-           textarea{
-               height: 90px;
-           }
-           .btn-contain{
-               margin-top: 20px;
-               a{
-                   button{
-                    width: 160px;
-                    height: 50px;
-                    font-size: 14px;
-                   }
-               }
-           }
+        }
+        .header-form__warning{
+            font-size: 14px;
+        }
+        textarea{
+            height: 90px;
+        }
+        .btn-contain{
+            margin-top: 20px;
+        }
+        .button{
+            width: 160px;
+            height: 50px;
+            font-size: 14px;
+            word-spacing: 2px;
         }
     }
 }

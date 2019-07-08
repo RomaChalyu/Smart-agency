@@ -1,17 +1,17 @@
 //--------------------------------BURGER-----------------------------------------------------------
 
-let ulHeader = document.querySelector("#headerMenu > ul");
+const listHeaderMenu = document.querySelector("#headerMenu > .header-menu__list");
 
-var temp = false;
-burgerIcon.addEventListener('click', function(){
-    if(temp){
-        temp = false;
+let isBurgerOpen = false;
+menuItem.addEventListener('click', () =>{
+    if(isBurgerOpen){
+        isBurgerOpen = false;
         setTimeout(function(){
             headerMenu.classList.remove('db');
             headerMenu.classList.add('dn');
         },400);
     } else{
-        temp =true; 
+        isBurgerOpen =true; 
         setTimeout(function(){
             headerMenu.classList.remove('dn')
             headerMenu.classList.add('db');
@@ -22,30 +22,30 @@ burgerIcon.addEventListener('click', function(){
 
 
 function animations() {
-    if(!temp){
-        ulHeader.classList.remove('header-menu__activ');
-        ulHeader.classList.add('header-menu__passive');
-        burgerIcon.classList.remove('animationIcon');
-        burgerIcon.classList.add('animationIcon-reverse');
+    if(!isBurgerOpen){
+        listHeaderMenu.classList.remove('header-menu__activ');
+        listHeaderMenu.classList.add('header-menu__passive');
+        menuItem.classList.remove('animation-burger');
+        menuItem.classList.add('animation-burger__reverse');
     }
     else{
-        ulHeader.classList.remove('header-menu__passive');
-        ulHeader.classList.add('header-menu__activ');
-        burgerIcon.classList.add('animationIcon');
-        burgerIcon.classList.remove('animationIcon-reverse');
+        listHeaderMenu.classList.remove('header-menu__passive');
+        listHeaderMenu.classList.add('header-menu__activ');
+        menuItem.classList.add('animation-burger');
+        menuItem.classList.remove('animation-burger__reverse');
     };
 }
-//---------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------
 
 //-------------------------------------------------FORM--------------------------------------------------------------
 
-let formText = document.querySelector("#user-message > .form-text");
-let formEmail = document.querySelector("#user-message > .form-email");
-let formMessage = document.querySelector("#user-message > .form-message"); 
+const formText = document.querySelector('#user-message > .form-text');
+const formEmail = document.querySelector('#user-message > .form-email');
+const formMessage = document.querySelector('#user-message > .form-message'); 
+const warningText = document.querySelector('#user-message > p');
 
-let warningText = document.querySelector("#user-message > p");
-
-form_submission.addEventListener('click', function(){
+form_submission.addEventListener('click', () =>{
+    let noEmptyForm = false;
     if(formMessage.value === ""){
         formMessage.classList.add('form-style');
         warningText.classList.add('form-warning-text');
@@ -53,6 +53,7 @@ form_submission.addEventListener('click', function(){
     }
     else{
         formMessage.classList.remove('form-style');
+        noEmptyForm +=1;
     }
     if(formEmail.value === ""){
         formEmail.classList.add('form-style');
@@ -61,6 +62,7 @@ form_submission.addEventListener('click', function(){
     }
     else{
         formEmail.classList.remove('form-style');
+        noEmptyForm +=1;
     }
     if(formText.value === ""){
         formText.classList.add('form-style');
@@ -69,9 +71,11 @@ form_submission.addEventListener('click', function(){
     }
     else{
         formText.classList.remove('form-style');
+        noEmptyForm +=1;
     }
-    if(formMessage.value !=="" && formEmail.value !== "" && formText.value !== ""){
+    if(noEmptyForm > 2){
         warningText.classList.remove('form-warning-text');
-        
     }
 });
+
+//-----------------------------------------------------------------------------------------------------------------

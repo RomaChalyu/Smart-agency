@@ -20,9 +20,6 @@ a {
     background-color: $gray;
 }
 
-.orange-lite{
-    color:$orange;
-}
 @keyframes animation-Menu{
     0%{
         top: -318px;
@@ -47,34 +44,33 @@ a {
     }
 };
 
-.animationIcon{
-    .icon1{
+.animation-burger{
+    .burger-line:first-child{
         position: absolute;
         top:  10px;
         transform: rotate(45deg);
         transition: transform 0.8s;
     }
-    .icon2{
+    .burger-line:nth-child(2){
         position: absolute;
         top: 10px;
         opacity: 0;
     }
-    .icon3{
+    .burger-line:last-child{
         position: absolute;
         top:10px;
         transform: rotate(-45deg);
         transition: transform 0.8s;
     }
 }
-
-.animationIcon-reverse{
-    .icon1{
+.animation-burger__reverse{
+    .burger-line:first-child{
         animation: animationIcon 0.4s;
     }
-    .icon2{
+    .burger-line:nth-child(2){
         animation: animationIcon2 0.4s;
     }
-    .icon3{
+    .burger-line:last-child{
         animation: animationIcon 0.4s;
     }
 }
@@ -109,9 +105,33 @@ a {
         transform: scale(1);
     }
 }
-.header-form > .form >.form-style{
+.header-form > form > .form-style{
     border-bottom: 1px solid  red;
     outline: none;
 }
 
+//----------------------------------------are used in js------------------------------------------------------------
+.header-logo-menu{
+    .db{
+        display: block;
+    }
+    .dn{
+        display: none;
+    }
+    .header-menu__activ{
+        background: black;
+        opacity: 0.9;
+        animation: animation-Menu  0.4s;
+    }
+    .header-menu__passive{
+        background: black;
+        opacity: 0.9;
+        animation: animation-Menu__reverse 0.4s; 
+    }
+}
 
+.header-form{
+    .form-warning-text{
+        display: block;
+    }
+}
