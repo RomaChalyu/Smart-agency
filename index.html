@@ -8,6 +8,52 @@
     <title>Smart Agency</title>
 </head>
 <body>
+    <header class="background-activ">
+        <div class="g-container">
+            <div class="header-logo-menu">
+                <div class="header-logo">
+                    <p class="header-logo__item"><span>S</span>mart</p>
+                </div>
+                <div class="header-menu" id="headerMenu">
+                    <ul class="header-menu__list">
+                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">HOME</a></li>
+                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">SERVIES</a></li>
+                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">PORTFOLIO</a></li>
+                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">ABOUT</a></li>
+                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">CONTACT</a></li>
+                    </ul> 
+                </div>
+                <div class="contain-burger">
+                    <div class="burger" id="menuItem">
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                    </div> 
+                </div>
+            </div>
+            <div class="header-title">
+                <div class="title-contain">
+                    <h1 class="header-headline"><span> Smart</span> Agency Landign Page</h1>
+                    <p class="header-title__text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Maiores, fuga provident. Libero magni quibusdam labore ad iste saepe hic, 
+                        maxime qui ipsum tempore beatae, volu tomi ptates        
+                        doloremque rerum aspernatur dolorum at! </p>
+                </div>
+            </div> 
+            <div class="header-form">
+                <form action="index.html" id="user-message">
+                    <h2 class="header-form__headline"><span>Send</span> A Message</h2>
+                    <input type="text" required placeholder="Your Name" maxlength = "28" class = "form-text">
+                    <input type="email" placeholder="Your Email" maxlength = "30" required class="form-email" >
+                    <textarea name="comment" placeholder="Your Message" maxlength="120" required class ="form-message" form="user-message"></textarea>
+                    <p class = "header-form__warning">All fields are required</p>
+                   <div class="btn-contain">
+                        <input type="submit" id='form_submission' value="Send Message &#8594" class="button">
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </header>
     <script src="build/js/js-min.js"></script>
 </body>
 </html>

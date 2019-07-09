@@ -1,3 +1,116 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../../fonts/Open Sans - Regular .ttf"); }
+
+@font-face {
+  font-family: "OpenSans-Semibold";
+  src: url("../../fonts/Open Sans - Semibold.ttf"); }
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../../fonts/SourceSansPro-Regular.otf"); }
+
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: OpenSans; }
+
+a {
+  text-decoration: none; }
+
+.g-container {
+  max-width: 1145px;
+  width: 100%; }
+
+.background-activ {
+  background-color: #d3d3d3; }
+
+@keyframes animation-Menu {
+  0% {
+    top: -318px;
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0,9;
+    top: 0; } }
+
+@keyframes animation-Menu__reverse {
+  0% {
+    top: 0px; }
+  100% {
+    top: -318px; } }
+
+.animation-burger .burger-line:first-child {
+  position: absolute;
+  top: 10px;
+  transform: rotate(45deg);
+  transition: transform 0.8s; }
+
+.animation-burger .burger-line:nth-child(2) {
+  position: absolute;
+  top: 10px;
+  opacity: 0; }
+
+.animation-burger .burger-line:last-child {
+  position: absolute;
+  top: 10px;
+  transform: rotate(-45deg);
+  transition: transform 0.8s; }
+
+.animation-burger__reverse .burger-line:first-child {
+  animation: animationIcon 0.4s; }
+
+.animation-burger__reverse .burger-line:nth-child(2) {
+  animation: animationIcon2 0.4s; }
+
+.animation-burger__reverse .burger-line:last-child {
+  animation: animationIcon 0.4s; }
+
+@keyframes animationIcon {
+  0% {
+    position: absolute;
+    top: 10px;
+    transform: rotate(45deg);
+    transition: transform 0.4s; }
+  100% {
+    position: relative;
+    top: 0;
+    transform: none; } }
+
+@keyframes animationIcon2 {
+  0% {
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    transform: scale(0); }
+  20% {
+    opacity: 0; }
+  100% {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transform: scale(1); } }
+
+.header-form > form > .form-style {
+  border-bottom: 1px solid  red;
+  outline: none; }
+
+.header-logo-menu .db {
+  display: block; }
+
+.header-logo-menu .dn {
+  display: none; }
+
+.header-logo-menu .header-menu__activ {
+  background: black;
+  opacity: 0.9;
+  animation: animation-Menu  0.4s; }
+
+.header-logo-menu .header-menu__passive {
+  background: black;
+  opacity: 0.9;
+  animation: animation-Menu__reverse 0.4s; }
+
+.header-form .form-warning-text {
+  display: block; }
