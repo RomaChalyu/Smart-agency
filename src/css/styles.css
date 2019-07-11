@@ -554,9 +554,33 @@ header {
 @media screen and (max-width: 1024px) {
   .process-text {
     width: 80%;
-    text-align: center; } }
+    text-align: center; }
+  .process-container {
+    margin-bottom: 80px; }
+  .process-section-item {
+    width: 35%;
+    margin-bottom: 30px; } }
+
+@media screen and (max-width: 768px) {
+  .process-item__btn {
+    width: 30%;
+    height: 45px;
+    margin-top: 120px; }
+  .process-section-item {
+    height: 245px;
+    margin-left: 5px;
+    margin-top: 10px; } }
 
 @media screen and (max-width: 425px) {
   .process-container {
     margin-top: 80px;
-    margin-bottom: 60px; } }
+    margin-bottom: 60px; }
+  .process-section-item {
+    width: 60%;
+    margin: 0;
+    margin-bottom: 30px; }
+  .process-item__btn span {
+    font-size: 14px;
+    margin-left: 8px; }
+  .process-item__btn {
+    width: 52%; } }
