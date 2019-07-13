@@ -132,11 +132,19 @@ header{
         word-spacing: 3px;
     }
     .button:hover{
-        transition: 0.7s;
+        transition: background-color 0.7s;
         background-color: #e9431e;
     }
 }
-
+.process-section-item{
+    .process-btn-animations{
+    box-shadow: 0 0 10px 0 #ff5c36 inset, 0 0 10px 4px #ff5c36;
+    background-color: white;
+    .button:hover{
+        background-color: white;
+    }
+    }
+}
 
 //----------------------------------------HEADER MEDIA SCREEN-----------------------------------------------------------------
 
@@ -348,6 +356,8 @@ margin: 15px;
 }
 
 
+
+
 .process-item__icon{
     margin-bottom: 15px;
     opacity: 0.8;
@@ -503,6 +513,21 @@ margin: 15px;
     }
 }
 
+.process-item__btn:hover{
+    background-color: $orange-light; 
+    margin-top: 130px;
+    p, span{
+        color : white;
+    }
+}
+.process-item__btn:active{
+    margin-top: 133px;
+    background-color: $orange;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.05);
+}
+.process-btn-animations{
+    animation: process-btn-animation 2.8s;
+}
 @media screen and (max-width :$desktop){
     .process-text{
         width: 80%;
@@ -521,6 +546,12 @@ margin: 15px;
     .process-item__btn{
         width: 30%;
         height: 45px;
+        margin-top: 120px;
+    }
+    .process-item__btn:hover{
+        margin-top: 117px;
+    }
+    .process-item__btn:active{
         margin-top: 120px;
     }
     .process-section-item{

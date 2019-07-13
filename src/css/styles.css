@@ -260,8 +260,14 @@ header {
     transition: background-color .7s linear 0.2s;
     word-spacing: 3px; }
   .header-form .button:hover {
-    transition: 0.7s;
+    transition: background-color 0.7s;
     background-color: #e9431e; }
+
+.process-section-item .process-btn-animations {
+  box-shadow: 0 0 10px 0 #ff5c36 inset, 0 0 10px 4px #ff5c36;
+  background-color: white; }
+  .process-section-item .process-btn-animations .button:hover {
+    background-color: white; }
 
 @media screen and (max-width: 1024px) {
   .header-logo-menu {
@@ -551,6 +557,20 @@ header {
     margin-left: 10px;
     opacity: 0.8; }
 
+.process-item__btn:hover {
+  background-color: #fc6744;
+  margin-top: 130px; }
+  .process-item__btn:hover p, .process-item__btn:hover span {
+    color: white; }
+
+.process-item__btn:active {
+  margin-top: 133px;
+  background-color: #ff5c36;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.05); }
+
+.process-btn-animations {
+  animation: process-btn-animation 2.8s; }
+
 @media screen and (max-width: 1024px) {
   .process-text {
     width: 80%;
@@ -565,6 +585,10 @@ header {
   .process-item__btn {
     width: 30%;
     height: 45px;
+    margin-top: 120px; }
+  .process-item__btn:hover {
+    margin-top: 117px; }
+  .process-item__btn:active {
     margin-top: 120px; }
   .process-section-item {
     height: 245px;
