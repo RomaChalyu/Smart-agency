@@ -42,6 +42,8 @@ a {
     top: -318px; } }
 
 .headline {
+  display: flex;
+  justify-content: center;
   font-family: OpenSans-Semibold;
   font-size: 50px;
   text-align: center;
@@ -49,6 +51,8 @@ a {
   color: #626262; }
   .headline span {
     color: #ff5c36; }
+  .headline p {
+    margin-left: 10px; }
 
 .title__text {
   text-align: center;
@@ -63,6 +67,8 @@ a {
   .headline {
     font-size: 30px;
     margin-bottom: 15px; }
+    .headline p {
+      margin-left: 5px; }
   .title__text {
     font-size: 14px; } }
 

@@ -77,3 +77,4 @@ form_submission.addEventListener('click', () =>{
         warningText.classList.remove('form-warning-text');
     }
 });
+

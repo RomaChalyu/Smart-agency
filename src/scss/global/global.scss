@@ -43,6 +43,8 @@ a {
 };
 
 .headline{
+    display: flex;
+    justify-content: center;
     font-family: OpenSans-Semibold;
     font-size: 50px;
     text-align: center;
@@ -50,6 +52,9 @@ a {
     color: $text-gray;  
     span {
         color : $orange;
+    }
+    p{
+        margin-left:10px;
     }
 }
 .title__text{
@@ -67,6 +72,9 @@ a {
     .headline{
         font-size: 30px;
         margin-bottom: 15px;
+        p{
+            margin-left:5px;
+        }
     }
     .title__text{
         font-size: 14px;
