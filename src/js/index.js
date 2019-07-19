@@ -78,3 +78,50 @@ form_submission.addEventListener('click', () =>{
     }
 });
 
+//-----------------------------------------GALLERY------- (BLOCK - FEATURED WORKS)-----------------------------------------------------------------
+
+const closeGallery = document.querySelector('.modal-window-contain > .modal-btn-close');
+const windowGallery = document.querySelector('.modal-window-gallery');
+// btn closeGallery
+closeGallery.addEventListener('click', () =>{
+    windowGallery.style.display = 'none';
+});
+
+
+const galleryBtnNext = document.querySelector('.modal-btn-contain > .modal-btn__next');
+const galleyBtnBack = document.querySelector('.modal-btn-contain > .modal-btn__back');
+
+const photoGallery = document.querySelectorAll('.modal-gallery_contain > .works-gallery__item');
+
+let countPhoto = 0;
+// btn next photo gallery
+galleryBtnNext.addEventListener('click', ()=>{
+    photoGallery[countPhoto].classList.remove('modal-opacity');
+    countPhoto++;
+    countPhoto === photoGallery.length ? countPhoto = 0 : countPhoto;
+    photoGallery[countPhoto].classList.add('modal-opacity');
+});
+// btn back photo gallery
+galleyBtnBack.addEventListener('click', () =>{
+    photoGallery[countPhoto].classList.remove('modal-opacity');
+    countPhoto--;
+    countPhoto < 0 ? countPhoto = photoGallery.length - 1 : countPhoto;
+    photoGallery[countPhoto].classList.add('modal-opacity');
+});
+
+let worksGallery = document.querySelectorAll(".Works-gallery > .works-gallery__item");
+//open modal window gallery by clicking a photo
+for (let i = 0; i < worksGallery.length; i++) {
+    worksGallery[i].addEventListener('click', (elem) => {
+        windowGallery.style.display = 'flex';
+        photoGallery[countPhoto].classList.remove('modal-opacity');
+        countPhoto = (elem.target.getAttribute('data-id')) -1;
+        photoGallery[countPhoto].classList.add('modal-opacity');
+    });
+}
+//open the modal window gallery by clicking a btn-mobile
+const mobileOoenGallery = document.querySelector('.mobile-photo > .mobile-photo-btn');
+mobileOoenGallery.addEventListener('click', () => {
+    windowGallery.style.display = 'flex';
+});
+
