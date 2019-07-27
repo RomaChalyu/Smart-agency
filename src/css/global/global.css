@@ -28,6 +28,12 @@ a {
 .background-activ {
   background-color: #d3d3d3; }
 
+.g-hidden {
+  display: none; }
+
+.df {
+  display: flex; }
+
 @keyframes animation-Menu {
   0% {
     top: -318px;

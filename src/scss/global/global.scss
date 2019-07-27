@@ -20,6 +20,12 @@ a {
 .background-activ{
     background-color: $gray;
 }
+.g-hidden{
+    display: none;
+}
+.df{
+    display: flex;
+}
 
 @keyframes animation-Menu{
     0%{
