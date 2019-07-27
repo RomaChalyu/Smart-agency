@@ -15,6 +15,9 @@
   padding: 0;
   font-family: OpenSans; }
 
+body {
+  position: relative; }
+
 a {
   text-decoration: none; }
 
@@ -24,6 +27,12 @@ a {
 
 .background-activ {
   background-color: #d3d3d3; }
+
+.g-hidden {
+  display: none; }
+
+.df {
+  display: flex; }
 
 @keyframes animation-Menu {
   0% {
@@ -42,6 +51,8 @@ a {
     top: -318px; } }
 
 .headline {
+  display: flex;
+  justify-content: center;
   font-family: OpenSans-Semibold;
   font-size: 50px;
   text-align: center;
@@ -49,6 +60,8 @@ a {
   color: #626262; }
   .headline span {
     color: #ff5c36; }
+  .headline p {
+    margin-left: 10px; }
 
 .title__text {
   text-align: center;
@@ -63,6 +76,8 @@ a {
   .headline {
     font-size: 30px;
     margin-bottom: 15px; }
+    .headline p {
+      margin-left: 5px; }
   .title__text {
     font-size: 14px; } }
 
@@ -212,6 +227,8 @@ header {
   margin-top: 200px; }
   .header-title .title-contain {
     width: 65%; }
+    .header-title .title-contain .header {
+      display: block; }
 
 .header-form {
   display: flex;
@@ -381,7 +398,7 @@ header {
     .header-form textarea {
       height: 90px; }
     .header-form .btn-contain {
-      margin-top: 20px; }
+      margin-top: 0; }
     .header-form .button {
       width: 160px;
       height: 50px;
@@ -516,7 +533,7 @@ header {
   margin-bottom: 10px; }
   .icon-photo-camera .image-photo-camera {
     width: 100px;
-    height: 720px;
+    height: 65px;
     background: url("../../image/photo_camera.png") no-repeat;
     background-size: contain; }
 
@@ -608,3 +625,228 @@ header {
     margin-left: 8px; }
   .process-item__btn {
     width: 52%; } }
+
+.Featured_Works {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  background-color: #fbfbfb; }
+
+.Works-container {
+  margin-top: 120px; }
+
+.Works-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px; }
+
+.works-gallery__item {
+  width: 355px;
+  height: 355px;
+  margin: 10px;
+  cursor: pointer; }
+
+.works-gallery_photo1 {
+  background: url("../../image/bicycle.jpg") no-repeat;
+  background-size: contain; }
+
+.works-gallery_photo2 {
+  background: url("../../image/eggs.jpg") no-repeat;
+  background-size: contain; }
+
+.works-gallery_photo3 {
+  background: url("../../image/clock.jpg") no-repeat;
+  background-size: contain; }
+
+.works-gallery_photo4 {
+  background: url("../../image/teapot.jpg") no-repeat;
+  background-size: contain; }
+
+.works-gallery_photo5 {
+  background: url("../../image/chair.jpg") no-repeat;
+  background-size: contain; }
+
+.works-gallery_photo6 {
+  background: url("../../image/flower.jpg") no-repeat;
+  background-size: contain; }
+
+.works-gallery_photo7 {
+  background: url("../../image/vase.jpg") no-repeat;
+  background-size: contain; }
+
+.works-gallery_photo8 {
+  background: url("../../image/clock-red.jpg") no-repeat;
+  background-size: contain; }
+
+.works-gallery_photo9 {
+  background: url("../../image/decor.jpg") no-repeat;
+  background-size: contain; }
+
+.Works-gallery-mobile {
+  display: none; }
+
+.modal-window-gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 333;
+  display: none;
+  justify-content: center; }
+  .modal-window-gallery .modal-window-contain {
+    position: fixed;
+    width: 95vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+  .modal-window-gallery .modal-gallery_contain {
+    display: flex;
+    justify-content: center; }
+  .modal-window-gallery .modal-photo {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin: 0; }
+  .modal-window-gallery .modal-opacity {
+    opacity: 1;
+    transition: opacity 2s; }
+  .modal-window-gallery .modal-btn-contain {
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    width: 100%;
+    height: 300px;
+    align-items: flex-end; }
+  .modal-window-gallery .modal-btn {
+    font-size: 105px;
+    color: #ff5c36;
+    cursor: pointer; }
+  .modal-window-gallery .modal-btn__back {
+    transform: rotate(180deg); }
+  .modal-window-gallery .modal-btn__next {
+    margin-bottom: 6px; }
+  .modal-window-gallery .modal-btn-close {
+    width: 40px;
+    height: 40px;
+    margin-left: 900px;
+    padding: 20px 15px 5px 5px;
+    cursor: pointer; }
+  .modal-window-gallery .btn-close {
+    width: 70px;
+    height: 8px;
+    background-color: #ff5c36;
+    border-radius: 20px; }
+  .modal-window-gallery .modal-btn-close :first-child {
+    transform: rotate(45deg);
+    margin-left: -7px;
+    margin-top: 7px; }
+  .modal-window-gallery .modal-btn-close :last-child {
+    transform: rotate(-45deg);
+    margin-top: -10px;
+    margin-left: -9px; }
+
+@media screen and (max-width: 1024px) {
+  .works-gallery__item {
+    width: 237px;
+    height: 237px;
+    margin: 10px; }
+  .modal-window-contain .modal-photo {
+    width: 400px;
+    height: 400px; }
+  .modal-window-contain .modal-btn-contain {
+    max-width: 600px;
+    height: 250px; }
+  .modal-window-contain .modal-btn-close {
+    margin-left: 620px; }
+  .modal-window-contain .btn-close {
+    width: 60px;
+    height: 7px; }
+  .modal-window-contain .modal-btn-close :first-child {
+    margin-left: -2px;
+    margin-top: 9px; }
+  .modal-window-contain .modal-btn-close :last-child {
+    transform: rotate(-45deg);
+    margin-top: -8px;
+    margin-left: -5px; }
+  .modal-window-contain .modal-btn {
+    font-size: 90px; }
+  .modal-window-contain .modal-btn__next {
+    margin-bottom: 5px; } }
+
+@media screen and (max-width: 768px) {
+  .Featured_Works {
+    margin-top: 80px; }
+  .Works-container {
+    margin-top: 80px; }
+  .works-gallery__item {
+    width: 202px;
+    height: 202px;
+    margin: 5px; }
+  .modal-window-contain .modal-btn-close {
+    margin-left: 359px;
+    margin-bottom: 20px; }
+  .modal-window-contain .modal-photo {
+    width: 350px;
+    height: 350px; }
+  .modal-window-contain .modal-btn-contain {
+    max-width: 550px; }
+  .modal-window-contain .modal-btn {
+    opacity: 0.8; }
+  .modal-window-contain .btn-close {
+    width: 50px;
+    height: 5px; }
+  .modal-window-contain .modal-btn-close :first-child {
+    margin-left: -8px;
+    margin-top: 31px; }
+  .modal-window-contain .modal-btn-close :last-child {
+    margin-top: -6px;
+    margin-left: -8px; } }
+
+@media screen and (max-width: 425px) {
+  .Works-gallery {
+    display: none; }
+  .Works-gallery-mobile {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center; }
+    .Works-gallery-mobile .mobile-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 250px;
+      border: 1px solid;
+      background: url("../../image/bicycle.jpg");
+      background-size: contain;
+      box-shadow: 0 0 200px 1px #000 inset;
+      position: relative;
+      z-index: 1; }
+    .Works-gallery-mobile .mobile-photo-btn {
+      width: 115px;
+      height: 32px;
+      border-radius: 30px;
+      background-color: #fc6744;
+      border: none;
+      box-shadow: 0 0 10px 0 #626262;
+      outline: 0;
+      color: white; }
+    .Works-gallery-mobile .mobile-photo-btn:active {
+      background-color: #ff5c36;
+      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.05); }
+  .modal-window-contain .modal-photo {
+    width: 300px;
+    height: 300px; }
+  .modal-window-contain .modal-btn {
+    font-size: 65px; }
+  .modal-window-contain .modal-btn-contain {
+    height: 200px; }
+  .modal-window-contain .modal-btn-close {
+    margin-left: 250px; } }
