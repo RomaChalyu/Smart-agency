@@ -128,3 +128,19 @@ mobileOoenGallery.addEventListener('click', () => {
     windowGallery.classList.add('df');
 });
 
+//----------------------------------Services----------------------------------------------------------------
+
+const servicesIcon = document.querySelectorAll('.services-contain-icon > .services-icon');
+const servicesText = document.querySelectorAll('.contain-text');
+
+servicesIcon.forEach((elem,i) => {
+    elem.addEventListener('click', () => {
+        servicesIcon.forEach((element) => {
+            element.classList.remove('shadow');
+        });
+        servicesText.forEach((element) => {
+            element.classList.remove('db');
+        });
+        servicesText[i].classList.add('db');
+    });
+});
