@@ -142,5 +142,6 @@ servicesIcon.forEach((elem,i) => {
             element.classList.remove('db');
         });
         servicesText[i].classList.add('db');
+        elem.classList.add('shadow');
     });
 });

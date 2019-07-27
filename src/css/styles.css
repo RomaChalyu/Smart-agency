@@ -178,6 +178,20 @@ a {
     padding-right: 0;
     opacity: 1; } }
 
+@keyframes animation-text-mobile {
+  0% {
+    margin-top: -200px;
+    padding-bottom: 200px;
+    opacity: 0.1; }
+  50% {
+    margin-top: -100px;
+    padding-bottom: 100px;
+    opacity: 0.2; }
+  100% {
+    margin-top: 0;
+    padding-bottom: 0;
+    opacity: 1; } }
+
 @font-face {
   font-family: "OpenSans";
   src: url("../../fonts/Open Sans - Regular .ttf"); }
@@ -606,9 +620,6 @@ header {
   background-color: #ff5c36;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.05); }
 
-.process-btn-animations {
-  animation: process-btn-animation 2.8s; }
-
 @media screen and (max-width: 1024px) {
   .process-text {
     width: 80%;
@@ -875,7 +886,8 @@ header {
 .services {
   display: flex;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 120px; }
   .services .services-container {
     display: flex;
     flex-direction: column;
@@ -918,32 +930,149 @@ header {
 .services-contain-icon .icon-search {
   background: url("../../image/ls3b.png") no-repeat;
   background-size: cover;
-  margin: 20px 0 0 15px;
+  margin: 20% 0 0 15%;
   width: 88px;
   height: 62px; }
 
-.services-text {
+.services-text__g-container {
   max-width: 500px;
   width: 100%; }
-  .services-text .contain-text {
+  .services-text__g-container .contain-text {
     display: none; }
-  .services-text .db {
+  .services-text__g-container .db {
     display: block;
     animation: animation-text 0.5s linear; }
-  .services-text .services-title {
+  .services-text__g-container .services-title {
     opacity: 0.75;
     font-family: "Open Sans";
     font-size: 30px;
     font-weight: 400; }
-  .services-text .services-text__design {
+  .services-text__g-container .services-text {
     font-family: "Open Sans";
     opacity: 0.7;
     font-size: 16px;
     line-height: 25px;
     margin-top: 20px; }
+  .services-text__g-container .services-btn {
+    border: none;
+    outline: 0;
+    background-color: white;
+    width: 170px;
+    height: 46px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #626262;
+    cursor: pointer;
+    margin-top: 20px; }
+    .services-text__g-container .services-btn p {
+      font-size: 28px;
+      opacity: 0.8; }
+    .services-text__g-container .services-btn span {
+      font-size: 18px;
+      margin-left: 10px;
+      opacity: 0.8; }
+  .services-text__g-container .services-btn:hover {
+    background-color: #fc6744;
+    transition: background-color  0.4s; }
+    .services-text__g-container .services-btn:hover p, .services-text__g-container .services-btn:hover span {
+      color: white; }
+  .services-text__g-container .services-btn:active {
+    background-color: #ff5c36;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.05);
+    transition: background-color 0s; }
 
 .services-image .services-image__apple-watch {
   background: url("../../image/apple-watch.png") no-repeat;
   background-size: cover;
   width: 360px;
   height: 403px; }
+
+@media screen and (max-width: 1024px) {
+  .services {
+    margin-bottom: 80px; }
+  .services-image .services-image__apple-watch {
+    width: 306px;
+    height: 322px;
+    margin-right: -40px; }
+  .services-contain-icon .services-icon {
+    width: 88px;
+    height: 78px; }
+  .services-text {
+    margin: 0 10px; } }
+
+@media screen and (max-width: 768px) {
+  .services {
+    margin-bottom: 60px; }
+  .services .services-contain {
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 60px;
+    width: 70vw; }
+  .services-contain-icon {
+    width: 60vw;
+    display: flex;
+    justify-content: space-around; }
+    .services-contain-icon .services-icon {
+      width: 70.4px;
+      height: 62.4px; }
+    .services-contain-icon .icon-pie_chart {
+      width: 50px;
+      height: 50px; }
+    .services-contain-icon .icon-settings {
+      width: 67px;
+      height: 70px; }
+    .services-contain-icon .icon-search {
+      width: 70px;
+      height: 50px; }
+  .services-text__g-container {
+    margin-top: 20px; }
+    .services-text__g-container .services-text {
+      margin-top: 10px; }
+    .services-text__g-container .services-title {
+      text-align: center; }
+    .services-text__g-container .db {
+      display: block;
+      animation: animation-text-mobile 0.5s linear; }
+  .services-image .services-image__apple-watch {
+    width: 183px;
+    height: 193px; } }
+
+@media screen and (max-width: 425px) {
+  .services {
+    margin-bottom: 30px; }
+    .services .services-contain {
+      width: 100vw; }
+  .services-contain-icon {
+    width: 100vw;
+    justify-content: center; }
+    .services-contain-icon .services-icon {
+      width: 53px;
+      height: 47px; }
+    .services-contain-icon .icon-pie_chart {
+      width: 36.6px;
+      height: 37.2px; }
+    .services-contain-icon .icon-settings {
+      width: 51px;
+      height: 50px; }
+    .services-contain-icon .icon-search {
+      width: 53px;
+      height: 37px; }
+  .contain-text .services-title {
+    font-size: 20px; }
+  .contain-text .services-text {
+    font-size: 14px; }
+  .contain-text .services-btn {
+    margin: auto;
+    margin-top: 10px;
+    width: 115px;
+    height: 33px; }
+    .contain-text .services-btn p {
+      font-size: 18px; }
+    .contain-text .services-btn span {
+      font-size: 14px; }
+  .services-image .services-image__apple-watch {
+    margin-top: 20px;
+    width: 146px;
+    height: 154px; } }
