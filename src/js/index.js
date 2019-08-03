@@ -145,3 +145,6 @@ servicesIcon.forEach((elem,i) => {
         elem.classList.add('shadow');
     });
 });
+
+
+//team-contai
