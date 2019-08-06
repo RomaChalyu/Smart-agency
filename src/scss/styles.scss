@@ -1138,7 +1138,6 @@ margin: 15px;
     width: 100%;
     height: 445px;
     box-shadow: 0 0 2px rgba(20, 20, 21, 0.6);
-    border: 1px solid $text-gray;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1159,9 +1158,24 @@ margin: 15px;
 }
 
 .team-statistics{
-    margin-bottom: 100px
+    display: none;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px;
 }
-.team-statistic__text{
+.team-statistic-animation{
+    display: block;
+    animation: team-opacity 1s;
+}
+@keyframes team-opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+       opacity: 1;
+    }
+}
+.team-statistic__name{
     font-size: 20px;
     font-weight: bold;
 }
@@ -1176,35 +1190,52 @@ margin: 15px;
 }
 .team-skill-width{
 height: 5px;
-background-color: $orange;
 margin-top: -5px;
 }
-.team-item1_desinger{
+.skill-design-item1{
     width: 73.5%;
 }
-.team-item1_english{
+.skill-english-item1{
     width: 81.4%;
 }
-.team-item1_communication{
+.skill-communication-item1{
     width: 92.2%;
 }
-.team-item2_desinger{
+.skill-desinger-item2{
 width: 80.5%;
 }
-.team-item2_english{
+.skill-english-item2{
     width: 71.4%;
 }
-.team-item2_communication{
+.skill-communication-item2{
     width: 55.2%;
 }
-.team-item3_desinger{
+.skill-desinger-item3{
     width: 87.5%;
 }
-.team-item3_english{
+.skill-english-item3{
     width: 79.4%;
 }
-.team-item3_communication{
+.skill-communication-item3{
     width: 80.2%;
+}
+.team-skill{
+    width: 100%;
+    height: 5px;
+}
+
+.animation-skill{
+    background-color: $orange;
+    animation: skill 1.8s;
+    animation-timing-function: ease;
+}
+@keyframes skill {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
 }
 .team-name{
     max-width: 263px;
@@ -1216,12 +1247,23 @@ width: 80.5%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.team-name_active{
+    background-color:rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+
 }
 .team-name__person{
     font-size: 30px;
     color: $text-gray;
     opacity: 0.7;
     font-weight: 800;
+}
+.team-name__person__active{
+    font-weight: 900;
+    color:black;
 }
 .team-name__UlUX{
     margin-top: 10px;
@@ -1230,13 +1272,14 @@ width: 80.5%;
     opacity: 0.7;
 }
 .team-name__social-network{
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     width: 100px;
     height: 30px;
     margin-top: 16px;
 }
+
 .social-network{
     height: 20px;
     width: 20px;
@@ -1258,4 +1301,133 @@ width: 80.5%;
     padding-right: 4px;
     margin-left: -4px;
 }
+.team-container-gradient{
+    display: block;
+    position: absolute;
+    max-width: 360px;
+    width: 100%;
+    height: 445px;
+    transform: rotate(180deg);
+}
+.team-gradient{
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(bottom, rgba(255, 255, 255,0),rgb(252, 208, 197));
+    animation: animation-gradient 0.5s;
+}
+.team-gradient-remove{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(bottom, rgba(255, 255, 255,0),rgb(252, 208, 197));
+    animation: animation-gradient-remove 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes animation-gradient{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 100%;
+    }
+}
+@keyframes animation-gradient-remove {
+    0%{
+        display: block;
+        height: 100%;
+    }
+    100%{
+        height: 0%;
+        display: none;
+    }
+}
 
+@media screen and (max-width : $desktop){
+    .team-container {
+        justify-content: space-around;
+    }
+    .team-container-item {
+        max-width: 240px;
+        height: 400px;
+    }
+    .team-container-gradient{
+        max-width: 240px;
+    }
+}
+
+@media screen and (max-width : $tablet){
+    .team-container-item {
+        max-width: 32%;
+        height: 300px;
+    }
+    .team-container-gradient{
+        max-width: 30%;
+        height: 300px;
+    }
+    .team-name__person {
+        font-size: 20px;
+    }
+    .team-statistics{
+        margin-bottom: 30px;
+    }
+    .team-statistic__name{
+        font-size: 14px;    
+    }
+    .team-name__UlUX{
+        font-size: 14px; 
+    }
+    .team-statistic__skills {
+        width: 100%;
+    }
+    .team-statistic__design, .team-statistic__english{
+        margin-bottom: 5px;
+    }
+}
+@media screen and (max-width : $phone){
+    .team-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-container-item {
+        max-width: 50%;
+        height: 285px;
+    }
+    .team-container-gradient{
+        max-width: 50%;
+        height: 285px;
+    }
+    .team-item1{
+        background-size: 100%;
+    }
+    .team-item2{
+        margin-top: -100px;
+        background-size: 100%;
+    }
+    .team-item3{
+        margin-top: -100px;
+        background-size: 100%;
+    }
+    .team-name {
+        position: absolute;;
+        width: 49%;
+        height: 70px;
+    }
+    .team-statistic__name {
+        font-size: 12px;
+    }
+    .team-statistics {
+        margin-bottom: 110px;
+    }
+    .team-name_active{
+        height: 100px;
+    }
+    .team-name__UlUX {
+        margin-top: 0;
+    }
+    .team-name__social-network{
+        margin-top: 5px;
+    }
+} 

@@ -146,5 +146,50 @@ servicesIcon.forEach((elem,i) => {
     });
 });
 
+//---------------------------------------------team-------------------------------------------------
+const team = document.querySelectorAll('.team-container-item');
+const teamGradient = document.querySelectorAll('.team-container-gradient > .team-gradient');
+const teamStatistics = document.querySelectorAll('.team-statistics');
 
-//team-contai
+team.forEach((elem,i) => {
+    elem.addEventListener('click',()=> {
+        teamGradient.forEach((e) => {
+            if(e.classList.value === 'team-gradient'){  //check element for class
+                return;
+            }
+            e.classList.remove('df');
+            e.classList.add('team-gradient-remove');
+        });
+        teamGradient[i].classList.remove('team-gradient-remove');
+        teamGradient[i].classList.add('df');
+        teamStatistics.forEach((e) => {
+            e.classList.remove('team-statistic-animation');
+        })
+        teamStatistics[i].classList.add('team-statistic-animation');
+    });
+});
+
+const stripSkill = document.querySelectorAll('.team-skill');
+const teamName = document.querySelectorAll('.team-name');
+const socialNetwork = document.querySelectorAll('.team-name__social-network');
+const textNameTeam = document.querySelectorAll('.team-name__person');
+
+team.forEach((elem,i) => {
+    elem.addEventListener('click', () => {
+        stripSkill.forEach((e) => {
+            e.classList.add('animation-skill');
+        });
+        teamName.forEach((e) => {
+            e.classList.remove('team-name_active');
+        });
+        teamName[i].classList.add('team-name_active');
+        socialNetwork.forEach((e) => {
+            e.classList.remove('df');
+        });
+        socialNetwork[i].classList.add('df');
+        textNameTeam.forEach((e) => {
+            e.classList.remove('team-name__person__active');
+        });
+        textNameTeam[i].classList.add('team-name__person__active');
+    });
+})
