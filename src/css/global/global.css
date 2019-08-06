@@ -77,7 +77,10 @@ a {
 
 @media screen and (max-width: 1024px) {
   .headline {
-    font-size: 40px; } }
+    font-size: 40px; }
+  .title__text {
+    width: 80%;
+    text-align: center; } }
 
 @media screen and (max-width: 425px) {
   .headline {
