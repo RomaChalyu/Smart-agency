@@ -193,3 +193,47 @@ team.forEach((elem,i) => {
         textNameTeam[i].classList.add('team-name__person__active');
     });
 })
+
+//------------------------------------------------REVIEWS-------------------------------------------------------------------
+const reviewsBtnBack = document.querySelector('.review-btn-back');
+const reviewsBtnNext = document.querySelector('.review-btn-next');
+const reviewClients = document.querySelectorAll('.review-clients');
+reviewsBtnNext.addEventListener('click', () => {
+    for(var i = 0; i < reviewClients.length; i+=2){
+        let strClass = reviewClients[i].classList.value;
+        reviewsBtnBack.classList.remove('review-btn__background')
+        if(i >= 2){
+            reviewsBtnNext.classList.add('review-btn__background');
+        }
+        if(i >= 4){
+            break;
+        }
+        if(strClass.indexOf('review-next') === -1){
+            for(var j = 0 ; j <reviewClients.length; j+=2){
+                reviewClients[j].classList.remove('review-back');
+            }
+            reviewClients[i].classList.add('review-next');
+            break;
+        }   
+    } 
+});
+
+reviewsBtnBack.addEventListener('click', () => {
+    for(var i =0; i < reviewClients.length; i+=2){
+        let strClass = reviewClients[i].classList.value;
+        if(strClass.indexOf('review-next') === -1){
+            reviewsBtnNext.classList.remove('review-btn__background');
+            let strClass2 = reviewClients[i-2].classList.value;
+            if(strClass2.indexOf('review-next review-back')){
+                reviewClients[i-2].classList.remove('review-back');
+                reviewClients[i-2].classList.remove('review-next');
+            }
+            if(i <= 2){
+                reviewsBtnBack.classList.add('review-btn__background');
+            }
+            reviewClients[i-2].classList.add('review-back');
+            break;
+        }   
+    }
+});
+
