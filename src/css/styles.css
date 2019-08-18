@@ -1359,3 +1359,226 @@ header {
     margin-top: 0; }
   .team-name__social-network {
     margin-top: 5px; } }
+
+.review {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 120px; }
+
+.review-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.clients-said-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.clients-said {
+  display: flex;
+  overflow: hidden; }
+
+.review-clients {
+  min-width: 48%;
+  width: 100%;
+  height: 272px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px; }
+  .review-clients .photo__one {
+    background: url("../../image/review-1.jpg");
+    background-size: cover; }
+  .review-clients .photo__two {
+    background: url("../../image/review-2.png");
+    background-size: cover; }
+  .review-clients .photo__three {
+    background: url("../../image/review-3.jpg");
+    background-size: cover; }
+  .review-clients .photo__four {
+    background: url("../../image/review-4.jpg");
+    background-size: cover; }
+  .review-clients .photo__five {
+    background: url("../../image/review-5.jpg");
+    background-size: cover; }
+  .review-clients .photo__six {
+    background: url("../../image/review-6.jpg");
+    background-size: cover; }
+
+.review-btn {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #ff5c36;
+  border: none;
+  outline: 0;
+  transition: background-color 1s; }
+
+.review-btn-text {
+  margin-top: -4px;
+  color: wheat;
+  font-size: 40px;
+  font-weight: 900;
+  cursor: pointer; }
+
+.btn-text-back {
+  margin-top: -2px;
+  transform: rotate(180deg); }
+
+.review-client-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; }
+
+.review-client-said {
+  margin-top: 15px;
+  width: 70%;
+  text-align: center; }
+
+.client1-assessment {
+  width: 70px;
+  background: url("../../image/star.png") repeat-x;
+  background-size: contain;
+  height: 14px; }
+
+.client2-assessment {
+  width: 58px;
+  background: url("../../image/star.png") repeat-x;
+  background-size: contain;
+  height: 14px; }
+
+.client3-assessment {
+  width: 58px;
+  background: url("../../image/star.png") repeat-x;
+  background-size: contain;
+  height: 14px; }
+
+.client4-assessment {
+  width: 70px;
+  background: url("../../image/star.png") repeat-x;
+  background-size: contain;
+  height: 14px; }
+
+.client5-assessment {
+  width: 70px;
+  background: url("../../image/star.png") repeat-x;
+  background-size: contain;
+  height: 14px; }
+
+.client6-assessment {
+  width: 45px;
+  background: url("../../image/star.png") repeat-x;
+  background-size: contain;
+  height: 14px; }
+
+.review-next {
+  animation: review_next 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes review_next {
+  0% {
+    margin-left: 0%; }
+  100% {
+    margin-left: -100%; } }
+
+.review-back {
+  animation: review_back 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes review_back {
+  0% {
+    margin-left: -100%; }
+  100% {
+    margin-left: 1%; } }
+
+.review-btn__background {
+  background-color: white;
+  transition: background-color 1.5s;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4); }
+  .review-btn__background .review-btn-text {
+    color: black; }
+
+.test {
+  margin-right: -1%; }
+
+.review-name-client {
+  font-size: 17px;
+  font-weight: 900; }
+  .review-name-client span {
+    font-weight: 100;
+    margin-left: 5px;
+    font-style: italic; }
+
+.review-slider-contain {
+  display: flex;
+  justify-content: center; }
+
+.review-slider {
+  margin-top: 50px;
+  display: flex;
+  width: 100px;
+  height: 100px; }
+
+.review-slider-item {
+  width: 25px;
+  height: 8px;
+  background: #e2dfdd;
+  margin-left: 3px;
+  border-radius: 40px; }
+
+.slider-item-active {
+  background: #ff5c36; }
+
+.g-hidden-slider {
+  display: none; }
+
+@media screen and (max-width: 1024px) {
+  .review-client-said {
+    margin-top: 0px; } }
+
+@media screen and (max-width: 768px) {
+  .review-btn {
+    height: 35px;
+    width: 35px; }
+  .review-btn-text {
+    font-size: 25px; }
+  .review-clients {
+    height: 240px; }
+  .review-client-said {
+    margin-top: 5px;
+    font-size: 12px;
+    width: 85%; }
+  .review-client-photo {
+    width: 60px;
+    height: 60px; }
+  .review-name-client {
+    text-align: center;
+    font-size: 12px; }
+  .item-client-assessment {
+    margin-top: 5px; }
+  .review-name-client {
+    margin-top: 5px; }
+  .review-slider {
+    margin-top: 20px; }
+  .review-client-photo {
+    margin-top: 20px; } }
+
+@media screen and (max-width: 425px) {
+  .review-clients {
+    min-width: 98.2%;
+    border: none; }
+  .clients-said-container {
+    margin-top: -40px; }
+  .g-hidden-slider {
+    display: block; }
+  .review-slider {
+    width: 50vw; }
+  .review-slider-item {
+    width: 7vw; }
+  .review-slider-item {
+    margin-left: 6px; } }
