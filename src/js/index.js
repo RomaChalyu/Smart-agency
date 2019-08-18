@@ -194,46 +194,114 @@ team.forEach((elem,i) => {
     });
 })
 
+//--------------------------------------------------------------------------------------------
+// переменная ширины экрана 
+let widthClient = document.documentElement.clientWidth;
+window.addEventListener('resize', () =>{
+    widthClient = document.documentElement.clientWidth;
+});
+
 //------------------------------------------------REVIEWS-------------------------------------------------------------------
 const reviewsBtnBack = document.querySelector('.review-btn-back');
 const reviewsBtnNext = document.querySelector('.review-btn-next');
 const reviewClients = document.querySelectorAll('.review-clients');
+const reviewClider = document.querySelectorAll('.review-slider-item');
+
+
+// btn next review
 reviewsBtnNext.addEventListener('click', () => {
-    for(var i = 0; i < reviewClients.length; i+=2){
-        let strClass = reviewClients[i].classList.value;
-        reviewsBtnBack.classList.remove('review-btn__background')
-        if(i >= 2){
-            reviewsBtnNext.classList.add('review-btn__background');
+    if(widthClient > 425){
+        for(var i = 0; i < reviewClients.length; i+=2){
+            let strClass = reviewClients[i].classList.value;
+            reviewsBtnBack.classList.remove('review-btn__background');
+
+            if(i >= 2) reviewsBtnNext.classList.add('review-btn__background');
+
+            if(i >= 4) break;
+
+            if(strClass.indexOf('review-next') === -1){
+                for(var j = 0 ; j <reviewClients.length; j+=2){
+                    reviewClients[j].classList.remove('review-back');
+                }
+                reviewClients[i].classList.add('review-next');
+                break;
+            }   
         }
-        if(i >= 4){
-            break;
-        }
-        if(strClass.indexOf('review-next') === -1){
-            for(var j = 0 ; j <reviewClients.length; j+=2){
-                reviewClients[j].classList.remove('review-back');
+    }
+    else{
+        for(var i = 0; i < reviewClients.length; i++){
+            let strClass = reviewClients[i].classList.value;
+            reviewsBtnBack.classList.remove('review-btn__background');
+
+            if(i >= 4) reviewsBtnNext.classList.add('review-btn__background');
+
+            if(i >= 5){
+                break;
             }
-            reviewClients[i].classList.add('review-next');
-            break;
-        }   
+
+            if(strClass.indexOf('review-next') === -1){
+                for(var j = 0 ; j < reviewClients.length; j++){
+                    reviewClients[j].classList.remove('review-back');
+                }
+                reviewClients[i].classList.add('review-next');
+                break;
+            }
+        }
+    }  
+});
+//btn back
+reviewsBtnBack.addEventListener('click', () => {
+    if(widthClient > 425){
+        for(var i =0; i < reviewClients.length; i+=2){
+            let strClass = reviewClients[i].classList.value;
+            if(strClass.indexOf('review-next') === -1){
+                reviewsBtnNext.classList.remove('review-btn__background');
+                if(i === 0) break;
+            
+                let strClass2 = reviewClients[i-2].classList.value;
+
+                if(strClass2.indexOf('review-next review-back')){
+                    reviewClients[i-2].classList.remove('review-back');
+                    reviewClients[i-2].classList.remove('review-next');
+                }
+                if(i <= 2) reviewsBtnBack.classList.add('review-btn__background');
+
+                reviewClients[i-2].classList.add('review-back');
+                break;
+            }   
+        } 
+    }
+    else{
+        for(var i = reviewClients.length - 1; i >= 0; i--){
+            let strClass = reviewClients[i].classList.value;
+            if(strClass.indexOf('review-clients review-next') !== -1){
+                reviewsBtnNext.classList.remove('review-btn__background');
+                reviewClients[i].classList.remove('review-next');
+                reviewClients[i].classList.add('review-back');
+
+                if(i === 0)reviewsBtnBack.classList.add('review-btn__background');
+
+                break;
+            }
+        }
     } 
 });
+let sliderActive = 0;
 
-reviewsBtnBack.addEventListener('click', () => {
-    for(var i =0; i < reviewClients.length; i+=2){
-        let strClass = reviewClients[i].classList.value;
-        if(strClass.indexOf('review-next') === -1){
-            reviewsBtnNext.classList.remove('review-btn__background');
-            let strClass2 = reviewClients[i-2].classList.value;
-            if(strClass2.indexOf('review-next review-back')){
-                reviewClients[i-2].classList.remove('review-back');
-                reviewClients[i-2].classList.remove('review-next');
-            }
-            if(i <= 2){
-                reviewsBtnBack.classList.add('review-btn__background');
-            }
-            reviewClients[i-2].classList.add('review-back');
-            break;
-        }   
-    }
+reviewsBtnBack.addEventListener('click',() => {
+    reviewClider[sliderActive].classList.remove('slider-item-active');
+    sliderActive -=1;
+    if(sliderActive < 0) sliderActive = 0;
+    reviewClider[sliderActive].classList.add('slider-item-active');
+    });
+
+
+reviewsBtnNext.addEventListener('click', () => {
+    reviewClider[sliderActive].classList.remove('slider-item-active');
+    sliderActive +=1;
+    if(widthClient > 425 && sliderActive > 2) sliderActive = 2;
+    else if(sliderActive > 5) sliderActive = 5;
+    reviewClider[sliderActive].classList.add('slider-item-active');
 });
+
 

@@ -1431,12 +1431,13 @@ width: 80.5%;
         margin-top: 5px;
     }
 }
-
+//--------------------------------------------------------------------------------------------
 //-----------------------------------------REVIEW-------------------------------------------
 .review{
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 120px;
 }
 .review-title{
     display: flex;
@@ -1449,20 +1450,19 @@ width: 80.5%;
     align-items: center;
 }
 .clients-said{
-    max-width: 1000px;
-    width: 100%;
     display: flex;
     overflow: hidden;
 }
 .review-clients{
-    min-width: 47%;
+    min-width: 48%;
     width: 100%;
     height:272px;
-    margin-right: 40px;
+    margin: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid;
+    border: 1px solid ;
+    border-radius: 5px; 
     .photo__one{
         background: url("../../image/review-1.jpg");
         background-size: cover;
@@ -1498,9 +1498,6 @@ width: 80.5%;
     outline:0;
     transition: background-color 1s;
 }
-.review-btn-next{
-    margin-left: -15px;
-}
 .review-btn-text{
     margin-top: -4px;
     color: wheat;
@@ -1522,11 +1519,38 @@ width: 80.5%;
     width: 70%;
     text-align: center;
 }
-.review-client-assessment{
-    display: flex;
-}
-.client1-assessment-positive{
+.client1-assessment{
     width: 70px;
+    background: url("../../image/star.png") repeat-x;
+    background-size: contain;
+    height: 14px;
+}
+.client2-assessment{
+    width: 58px;
+    background: url("../../image/star.png") repeat-x;
+    background-size: contain;
+    height: 14px;
+}
+.client3-assessment{
+    width: 58px;
+    background: url("../../image/star.png") repeat-x;
+    background-size: contain;
+    height: 14px;
+}
+.client4-assessment{
+    width: 70px;
+    background: url("../../image/star.png") repeat-x;
+    background-size: contain;
+    height: 14px;
+}
+.client5-assessment{
+    width: 70px;
+    background: url("../../image/star.png") repeat-x;
+    background-size: contain;
+    height: 14px;
+}
+.client6-assessment{
+    width: 45px;
     background: url("../../image/star.png") repeat-x;
     background-size: contain;
     height: 14px;
@@ -1538,10 +1562,10 @@ width: 80.5%;
 }
 @keyframes review_next {
     0%{
-        margin-left: 0px;
+        margin-left: 0%;
     }
     100%{
-        margin-left: -1023px;
+        margin-left: -100%;
     }
 }
 .review-back{
@@ -1550,10 +1574,10 @@ width: 80.5%;
 }
 @keyframes review_back {
     0%{
-        margin-left: -1023px;
+        margin-left: -100%;
     }
     100%{
-        margin-left: 0px;
+        margin-left: 1%;
     }
 }
 .review-btn__background{
@@ -1564,3 +1588,107 @@ width: 80.5%;
         color: black;
     }
 }
+.test {
+    margin-right: -1%;
+}
+.review-name-client{
+    font-size: 17px;
+    font-weight: 900;
+    span{
+        font-weight: 100;
+        margin-left: 5px;
+        font-style: italic;
+    }
+}
+.review-slider-contain{
+    display: flex;
+    justify-content: center;
+}
+.review-slider{
+    margin-top: 50px;
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+.review-slider-item{
+    width: 25px;
+    height: 8px;
+    background: rgb(226, 223, 221);
+    margin-left: 3px;
+    border-radius: 40px;
+}
+.slider-item-active{
+    background: $orange;
+}
+.g-hidden-slider{
+    display: none;
+}
+//--------------------------------------------REVIEW MEDIA SCREEN-----------------------------------------------
+@media screen and (max-width : $desktop){
+    .review-client-said {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width : $tablet){
+    .review-btn {
+        height: 35px;
+        width: 35px;
+    }
+    .review-btn-text {
+        font-size: 25px;
+    }
+    .review-clients{
+        height: 240px;
+    }
+    .review-client-said{
+        margin-top: 5px;
+        font-size: 12px;
+        width: 85%;
+    }
+    .review-client-photo{
+        width: 60px;
+        height: 60px;
+    }
+    .review-name-client{
+        text-align: center;
+        font-size: 12px;
+    }
+    .item-client-assessment{
+        margin-top: 5px;
+    }
+    .review-name-client{
+        margin-top: 5px;
+    }
+    .review-slider {
+        margin-top: 20px;
+    }
+    .review-client-photo{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width : $phone){
+    .review-clients {
+        min-width: 98.2%;
+        border:none;
+    }
+    .clients-said-container{
+        margin-top: -40px;
+    }
+    .g-hidden-slider{
+        display: block;
+    }
+    .review-slider{
+        width: 50vw;
+    }
+    .review-slider-item{
+        width: 7vw;
+    }
+    .review-slider-item{
+        margin-left:6px;
+    }
+}
+//--------------------------------------------------------------------------------------------
+//-----------------------------------------FOOTER-------------------------------------------
+
