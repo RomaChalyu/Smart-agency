@@ -8,7 +8,7 @@
     <title>Smart Agency</title>
 </head>
 <body>
-    <header class="background-activ">
+    <header>
         <div class="g-container">
             <div class="header-logo-menu">
                 <div class="header-logo">
@@ -16,11 +16,12 @@
                 </div>
                 <div class="header-menu" id="headerMenu">
                     <ul class="header-menu__list">
-                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">HOME</a></li>
-                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">SERVIES</a></li>
-                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">PORTFOLIO</a></li>
-                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">ABOUT</a></li>
-                        <li class = "header-list__item"><a class="header-list__link" href = "index.html">CONTACT</a></li>
+                        <li class = "header-list__item"><a href="#process" class="header-list__link">Working Process</a></li>
+                        <li class = "header-list__item"><a href = "#portfolio" class="header-list__link">Featured Works</a></li>
+                        <li class = "header-list__item"><a href = "#services" class="header-list__link">Services We Provide</a></li>
+                        <li class = "header-list__item"><a href = "#team" class="header-list__link">Our Team</a></li>
+                        <li class = "header-list__item"><a href = "#review" class="header-list__link">Clients Said</a></li>
+                        <li class = "header-list__item"><a href = "#contact" class="header-list__link">Contact</a></li>
                     </ul> 
                 </div>
                 <div class="contain-burger">
@@ -54,7 +55,7 @@
             </div>
         </div>
     </header>
-    <section class="process">
+    <section class="process" id = 'process'>
         <div class="g-container">
             <div class="process-container">
                 <h2 class="process headline"><span>Working</span><p>Process<p></p></h2>
@@ -106,7 +107,7 @@
             </div>
         </div>
     </section>
-    <section class="Featured_Works margin-top">
+    <section class="Featured_Works margin-top" id='portfolio'>
         <div class="g-container">
             <div class="Works-container margin-top">
                 <h2 class="Works_title headline"><span>Featured</span><p>Works</p></h2>
@@ -153,7 +154,7 @@
             </div>
         </div>
     </section>
-    <section class="services margin-top">
+    <section id="services" class="services margin-top">
         <div class="g-container">
             <div class="services-container">
                 <h2 class="headline"><span>Services</span><p>We Provide</p></h2>
@@ -246,7 +247,7 @@
             </div>
         </div>
     </section>
-    <section class="team margin-top">
+    <section id='team' class="team margin-top">
         <div class="g-container">
             <div class="team-title margin-top">
                 <h2 class="headline"><span>Team</span><p>Chinen & Skills<p></p></h2>
@@ -387,7 +388,7 @@
                 </div>
         </div>
     </section>
-    <section class="review margin-top">
+    <section id='review'class="review margin-top">
         <div class="g-container">
             <div class="review-title">
                 <h2 class="headline"><span>Clients</span><p> Said<p></p></h2>
@@ -482,24 +483,30 @@
             </div>
         </div>
     </section>
-    <footer class="footer margin-top">
-        <div class="g-container">
-            <div class="footer-links-site">
-                <ul class="footer-links_list">
-                    <li class="footer-link-item footer-linkedIn"><a href="https://www.linkedin.com/" target="_blank"></a></li>
-                    <li class="footer-link-item footer-dribbble"><a href="https://dribbble.com/" target="_blank"></a></li>
-                    <li class="footer-link-item footer-envato"><a href="https://envato.com/" target="_blank"></a></li>
-                </ul>
-                <ul class="footer-links_list">
-                    <li class="footer-link-item footer-linkedIn"><a href="https://www.linkedin.com/" target="_blank"></a></li>
-                    <li class="footer-link-item footer-dribbble"><a href="https://dribbble.com/" target="_blank"></a></li>
-                    <li class="footer-link-item footer-envato"><a href="https://envato.com/" target="_blank"></a></li>
-                </ul>
+    <footer id='contact'class="footer margin-top">
+        <div class="footer-container__links-site">
+            <div class="g-container">
+                <div class="footer-links-site">
+                    <ul class="footer-links_list">
+                        <li class="footer-link-item footer-linkedIn"><a href="https://www.linkedin.com/" target="_blank"></a></li>
+                        <li class="footer-link-item footer-dribbble"><a href="https://dribbble.com/" target="_blank"></a></li>
+                        <li class="footer-link-item footer-envato"><a href="https://envato.com/" target="_blank"></a></li>
+                    </ul>
+                    <ul class="footer-links_list">
+                        <li class="footer-link-item footer-linkedIn"><a href="https://www.linkedin.com/" target="_blank"></a></li>
+                        <li class="footer-link-item footer-dribbble"><a href="https://dribbble.com/" target="_blank"></a></li>
+                        <li class="footer-link-item footer-envato"><a href="https://envato.com/" target="_blank"></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links-social_networks">
-                <div class="footer-btn-contain">
-                    <div class="footer-btn">
-                        <p>Contact Us</p>
+        </div>
+        <div class="footer-container__social_networks">
+            <div class="g-container">
+                <div class="footer-links-social_networks">
+                    <div class="footer-btn-contain">
+                        <div class="footer-btn">
+                            <p>Contact Us</p>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-social-links">
@@ -511,21 +518,22 @@
                     <div class="footer-social-item">
                         <a href="https://twitter.com/?lang=ru" target="_blank">
                                 <div class="social-item__elem social-item__twitter"></div>
-                            </a>
+                        </a>
                     </div>
                     <div class="footer-social-item">
                         <a href="https://www.instagram.com/" target="_blank">
                                 <div class="social-item__elem social-item__instagram"></div>
-                            </a>
+                        </a>
                     </div>
                     <div class="footer-social-item">
                         <a href="https://www.pinterest.com/" target="_blank">
                                 <div class="social-item__elem social-item__pinterest"></div>
-                            </a>
+                        </a>
                     </div>
                     <p class="footer-text">© 2015 - 2016 Deviserweb Ltd.</p>
                 </div>
             </div>
+        </div>
       </footer>
     <script src="build/js/js-min.js"></script>
 </body>

@@ -15,6 +15,9 @@
   padding: 0;
   font-family: OpenSans; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   position: relative; }
 
@@ -24,9 +27,6 @@ a {
 .g-container {
   max-width: 1145px;
   width: 100%; }
-
-.background-activ {
-  background-color: #d3d3d3; }
 
 .g-hidden {
   display: none; }

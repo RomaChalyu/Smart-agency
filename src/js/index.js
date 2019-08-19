@@ -303,5 +303,3 @@ reviewsBtnNext.addEventListener('click', () => {
     else if(sliderActive > 5) sliderActive = 5;
     reviewClider[sliderActive].classList.add('slider-item-active');
 });
-
-
